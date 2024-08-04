@@ -12,7 +12,7 @@ window.addEventListener('keydown', async (event) => {
         const result = await getCoordinates(country.value);
         renderTemperature(result);
       } catch (error) {
-        console.log(error);
+        alert(error);
       }
     }
   }
@@ -24,7 +24,7 @@ searchBtn.addEventListener('click', async () => {
       const result = await getCoordinates(country.value);
       renderTemperature(result);
     } catch (error) {
-      console.log(error);
+      alert(error);
     }
   }
 });

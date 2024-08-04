@@ -6,7 +6,7 @@ const getCountries = async () => {
     const result = await response.json();
     handleCountries(result);
   } catch (error) {
-    console.log('Error fetching list of countries', error);
+    alert('Error fetching list of countries', error);
   }
 };
 

@@ -9,7 +9,7 @@ const getWeather = async (result) => {
     const weatherData = await response.json();
     return weatherData;
   } catch (error) {
-    console.error('Error fetching weather data:', error);
+    alert('Error fetching weather data:', error);
   }
 };
 

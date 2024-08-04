@@ -9,7 +9,7 @@ const getCoordinates = async (country) => {
     const data = await getWeather(result);
     return data;
   } catch (error) {
-    console.error('Error fetching coordinates:', error);
+    alert('Error fetching coordinates:', error);
   }
 };
 
