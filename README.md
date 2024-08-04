@@ -17,3 +17,4 @@ One of the things I have in mind is to make a pretty considerable improvement, s
 ### Todo:
 - [ ] Intregrate Tailwind CSS
 - [ ] Rewrite it in Typescript
+- [ ] Improve UI and add new features
