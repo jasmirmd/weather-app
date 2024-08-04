@@ -3,8 +3,9 @@
   grid-template-rows: auto 1fr auto;
   gap: 2rem;
   padding: 1rem;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
-  width: 400px;
+  width: 350px;
   height: 500px;
+  background-color: #2f2d79af;
 }

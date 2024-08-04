@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  color: #ffffff;
 }
 
 .divider {
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  opacity: 0.1;
 }

@@ -12,4 +12,6 @@ body {
   min-height: 100vh;
   height: 100vh;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: rgb(247,129,102);
+  background: linear-gradient(180deg, rgba(247,129,102,1) 0%, rgba(13,17,23,1) 0%, rgba(21,23,28,1) 67%, rgba(22,24,29,1) 100%); 
 }

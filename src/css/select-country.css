@@ -1,6 +1,8 @@
 .country-name {
   border: none;
   outline: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(225, 225, 225, 0.2);
+  background-color: transparent;
+  color: #ffffff;
   width: 100%;
 }
