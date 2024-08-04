@@ -1,9 +1,8 @@
-import populateDataListCountries from './populate-datalist-countries';
+import populateDatalist from './populate-datalist';
 
 const handleCountries = (result) => {
-  const countriesData = Array.from(result.data, (i) => i.country);
-  const countries = new Set(countriesData);
-  populateDataListCountries(countries);
+  const countries = Array.from(result, (i) => i.name.common);
+  populateDatalist(countries);
 };
 
 export default handleCountries;

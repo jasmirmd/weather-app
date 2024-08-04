@@ -1,1 +1,1 @@
-import './get-countries-cities';
+import './get-countries.js';
