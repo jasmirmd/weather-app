@@ -30,5 +30,5 @@ searchBtn.addEventListener('click', async () => {
 });
 
 const renderTemperature = (result) => {
-  temperature.textContent = result.hourly.temperature_2m[0];
+  temperature.textContent = result.current.temperature_2m;
 };
