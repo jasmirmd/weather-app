@@ -4,7 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const imgRule = { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: 'asset/resource' };
 
-const cssRule = { test: /\.css$/i, use: ['style-loader', 'css-loader'] };
+const cssRule = {
+  test: /\.css$/i,
+  include: path.resolve(__dirname, 'src'),
+  use: ['style-loader', 'css-loader', 'postcss-loader']
+};
 
 const fontRule = {
   test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -23,7 +27,7 @@ const babelRule = {
 };
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/main.js',
   output: {
     filename: 'bundle.js',
@@ -43,12 +47,17 @@ module.exports = {
   ],
 
   devServer: {
+    static: {
+      directory: path.resolve(__dirname, 'dist')
+    },
     client: {
       overlay: true
     },
     watchFiles: ['public/*.html'],
     hot: true,
     open: true,
-    port: 8080
+    port: 8080,
+    compress: true,
+    historyApiFallback: true
   }
 };
