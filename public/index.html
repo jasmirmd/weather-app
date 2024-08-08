@@ -7,7 +7,7 @@
 </head>
 <body class="font-sans bg-gray-700 text-white">
   <div class="min-h-screen h-0 bg-gray-700 flex justify-center items-center select-none">
-    <div class="grid grid-cols-2 h-3/4 w-3/6 min-h-96 min-w-96">
+    <div class="grid grid-cols-2 min-h-[30rem] min-w-[40rem]">
       <div class="bg-gradient-to-tr from-sky-500 to-blue-600 rounded-xl drop-shadow-lg p-4 grid">
         <div class="flex justify-between">
           <div class="flex flex-col gap-4">
@@ -17,7 +17,7 @@
             </div>
             <div class="flex items-center gap-1">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-              <p class="font-medium">Paris, FR</p>
+              <p class="font-medium">Paris, France</p>
             </div>
           </div>
           <div>
@@ -30,7 +30,7 @@
         </div>
       </div>
       
-      <div class="bg-slate-900 h-[90%] self-center rounded-r-xl drop-shadow-lg grid p-6">
+      <div class="bg-slate-900 h-[90%] self-center rounded-r-xl drop-shadow-lg grid grid-rows-3 p-6">
         <div class="flex flex-col gap-2 text-lg justify-center">
           <div class="flex justify-between">
             <p class="font-medium">Precipitation</p>
@@ -45,12 +45,7 @@
             <p class="opacity-80">0km/h</p>
           </div>
         </div>
-        <div class="grid grid-cols-4 items-center justify-center gap-2">
-          <div class="bg-slate-800 flex flex-col justify-between items-center rounded-md p-2 gap-1 font-semibold">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-            <p>Tue</p>
-            <p>26C</p>
-          </div>
+        <div class="grid grid-cols-3 items-center justify-center gap-2">
           <div class="bg-slate-800 flex flex-col justify-between items-center rounded-md p-2 gap-1 font-semibold">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
             <p>Tue</p>
@@ -68,10 +63,17 @@
           </div>
         </div>
         <div class="flex justify-center items-center">
-          <button class="flex justify-center items-center gap-1 bg-gradient-to-br from-blue-400 to-sky-400 p-2 rounded-lg w-full text-black font-semibold" type="button">
+          <button id="change-location-btn" class="flex justify-center items-center gap-1 bg-gradient-to-br from-blue-400 to-sky-400 p-2 rounded-lg w-full text-black font-semibold" type="button">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
             Change Location
           </button>
+          <div id="location-form" class="hidden flex-col flex-1 gap-2">
+            <input placeholder="City, Country" class="font-medium outline-none p-1 rounded-md bg-slate-700" type="text">
+            <div class="flex gap-2">
+              <button id="location-form-cancel-btn" class="border-[1px] border-slate-400 flex-1 font-medium text-sm p-0.5 rounded-md" type="button">Cancel</button>
+              <button id="location-form-search-btn" class="border-[1px] border-slate-400 flex-1 font-medium text-sm p-0.5 rounded-md" type="button">Search</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
